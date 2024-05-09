@@ -1,0 +1,14 @@
+Package: fastPSSIM
+Type: Package
+Title: A Faster Test of Independence in the Presence of Heteroscedastic Treatment Effects PSSIM
+Version: 1.0
+Date: 2024-05-08
+Authors@R: as.person(c("Dennison Jackson <denjacksonsemail@gmail.com> [aut, cre]", 
+                       "Haiyan Wang <hwwang@ksu.edu> [aut]"))
+Maintainer: Dennison Jackson <denjacksonsemail@gmail.com>
+Description: This package implements the second key function of the PSSIM package, a test of independence between a response and a covariate in the presence of heteroscedastic treatment effects proposed by Wang, Tolos, and Wang (2010). This package differs from PSSIM in that it was rewritten using Rcpp, which greatly decreases the runtime of the test. 
+License: GPL (>= 2)
+Imports: Rcpp (>= 1.0.12)
+LinkingTo: Rcpp, RcppArmadillo
+Encoding: UTF-8
+RoxygenNote: 7.3.1
