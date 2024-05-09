@@ -1,0 +1,25 @@
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+# fastPSSIM
+
+<!-- badges: start -->
+
+[![R-CMD-check](https://github.com/DenJackson42/fastPSSIM/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/DenJackson42/fastPSSIM/actions/workflows/R-CMD-check.yaml)
+<!-- badges: end -->
+
+fastPSSIM implements a faster version of the second key function of the
+PSSIM package, a test of independence between a response and a covariate
+in the presence of heteroscedastic treatment effects proposed by Wang,
+Tolos, and Wang (2010). This package differs from PSSIM in that it was
+rewritten using Rcpp, which greatly decreases the runtime of the test.
+
+## Installation
+
+You can install the development version of fastPSSIM from
+[GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("DenJackson42/fastPSSIM")
+```
