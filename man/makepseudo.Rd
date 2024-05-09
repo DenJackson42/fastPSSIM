@@ -22,11 +22,13 @@ treatment level.}
 \value{
 A list containing the following:
 \itemize{
-  \item \strong{psudo}: A 3D array of dimensions (\code{k}, \code{a}, 
-  \code{N}) that stores the augmented observations based on the k-nearest 
+  \item \strong{psudo}: A 1-D vector of size \code{k}*\code{a}*\code{N} 
+  that represents a flattened 3-D matrix of dimension (\code{k}, \code{a}, 
+  \code{N}). Stores the augmented observations based on the k-nearest 
   neighbor rule in Wang, Tolos and Wang (2010).
-  \item \strong{index}: A 3D array of dimensions (\code{k}, \code{a}, 
-  \code{N}) that stores the indices of the observations used for 
+  \item \strong{index}: A 1-D vector of size \code{k}*\code{a}*\code{N} 
+  that represents a flattened 3-D matrix of dimension (\code{k}, \code{a}, 
+  \code{N}). Stores the indices of the observations used for 
   augmentation.
 }
 }

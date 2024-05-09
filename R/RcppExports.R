@@ -72,11 +72,13 @@ NPtest_indept <- function(dat, k = 7L) {
 #' 
 #' @return A list containing the following:
 #' \itemize{
-#'   \item \strong{psudo}: A 3D array of dimensions (\code{k}, \code{a}, 
-#'   \code{N}) that stores the augmented observations based on the k-nearest 
+#'   \item \strong{psudo}: A 1-D vector of size \code{k}*\code{a}*\code{N} 
+#'   that represents a flattened 3-D matrix of dimension (\code{k}, \code{a}, 
+#'   \code{N}). Stores the augmented observations based on the k-nearest 
 #'   neighbor rule in Wang, Tolos and Wang (2010).
-#'   \item \strong{index}: A 3D array of dimensions (\code{k}, \code{a}, 
-#'   \code{N}) that stores the indices of the observations used for 
+#'   \item \strong{index}: A 1-D vector of size \code{k}*\code{a}*\code{N} 
+#'   that represents a flattened 3-D matrix of dimension (\code{k}, \code{a}, 
+#'   \code{N}). Stores the indices of the observations used for 
 #'   augmentation.
 #' }
 #' 
@@ -108,12 +110,11 @@ makepseudo <- function(N, n, k, a, alltrt) {
 #' 
 #' @description
 #' Function \code{mapindex()} maps the 1-d index \eqn{r = 1, \ldots, N} to 2-d 
-#' index \eqn{i = 1, \ldots, a}, \eqn{j = 1, \ldots, n_i}{j = 1, ..., n_i}. 
-#' Generally the covariate values from all treatments are stored together in 
-#' one vector and \eqn{r = 1, \ldots, N} enumerates the values. For any integer
-#' between 1 and \eqn{N}, \code{mapindex()} tells which treatment the 
-#' \eqn{r^{th}} value belongs to, and which observation in the identified 
-#' treatment.
+#' index \eqn{i = 1, \ldots, a}, \eqn{j = 1, \ldots, n_i}. Generally the 
+#' covariate values from all treatments are stored together in one vector and 
+#' \eqn{r = 1, \ldots, N} enumerates the values. For any integer between 1 and 
+#' \eqn{N}, \code{mapindex()} tells which treatment the \eqn{r^{th}} value 
+#' belongs to, and which observation in the identified treatment.
 #' 
 #' This is a rewrite of the original \code{mapindex()}function from the PSSIM
 #' library using Rcpp to decrease runtime. If you load both this library and 
